@@ -2,23 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="proj init">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cost-control-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cost-control.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.routes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cost-icon6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HistoryPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/base.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/colors.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/darkTheme/darkTheme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/darkTheme/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/lightTheme/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/lightTheme/lightTheme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/selectors.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/theme.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/variables.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +47,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1viGvx3GTituLI0a5wNRuEHPAaJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,12 +59,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="E:\Workflow\React\cost-control\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="E:\Workflow\React\cost-control-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Workflow\React\cost-control-app\src" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -70,6 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1627037730025</updated>
       <workItem from="1627037731107" duration="1174000" />
+      <workItem from="1627041158096" duration="12896000" />
     </task>
     <task id="LOCAL-00001" summary="proj init">
       <created>1627038796937</created>
@@ -78,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627038796937</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="proj init">
+      <created>1627039545411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627039545411</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

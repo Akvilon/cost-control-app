@@ -1,11 +1,17 @@
 import React from 'react';
+import {Switch, Route} from "react-router-dom";
+import {routes, AppRoute} from './App.routes';
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-     fgf
-    </div>
+    <>
+        <Switch>
+            {
+                routes.map((route: AppRoute) => <Route key={route.id} {...route}/>)
+            }
+        </Switch>
+    </>
   );
 }
 
-export default App;
+
