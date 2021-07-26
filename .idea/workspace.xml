@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="added wrapper icons + starting routing">
+    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="added header styles">
+      <change afterPath="$PROJECT_DIR$/src/components/Expense List/Expense-List.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Expense List/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/Home.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/colors.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/selectors.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/selectors.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <updated>1627037730025</updated>
       <workItem from="1627037731107" duration="1174000" />
       <workItem from="1627041158096" duration="13052000" />
-      <workItem from="1627309712410" duration="3944000" />
+      <workItem from="1627309712410" duration="8660000" />
     </task>
     <task id="LOCAL-00001" summary="proj init">
       <created>1627038796937</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627055851605</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added header styles">
+      <created>1627313724903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627313724903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="proj init" />
     <MESSAGE value="added wrapper icons + starting routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added wrapper icons + starting routing" />
+    <MESSAGE value="added header styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added header styles" />
   </component>
 </project>

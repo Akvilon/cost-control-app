@@ -1,4 +1,4 @@
-import {getReverseFontColorStyle, getWrapperBackgroundStyle, Theme} from "../../styles";
+import {getReverseFontColorStyle, Theme} from "../../styles";
 import {createUseStyles} from "react-jss";
 
 export default createUseStyles((theme: Theme) => ({
