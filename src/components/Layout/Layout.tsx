@@ -20,24 +20,23 @@ const Layout: React.FC<LayoutProps> = ({children}): React.ReactElement => {
 
     return (
         <div className={classes["cc-wrapper"]}>
-            <div className={classes["cc-wrapper-inner"]}>
-                <div className={classes["cc-wrapper-inner-section"]}>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon1} alt="cost icon"/>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon2} alt="cost icon"/>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon3} alt="cost icon"/>
-                </div>
-                <div className={classes["cc-content"]}>
-                    <Header/>
-                    <main>
-                        {children}
-                    </main>
-                </div>
-                <div className={classes["cc-wrapper-inner-section"]}>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon4} alt="cost icon"/>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon5} alt="cost icon"/>
-                    <img className={classes["cc-wrapper-inner-icon"]} src={costIcon6} alt="cost icon"/>
-                </div>
+            <div className={classes["cc-wrapper-inner-section"]}>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon1} alt="cost icon"/>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon2} alt="cost icon"/>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon3} alt="cost icon"/>
             </div>
+            <div className={classes["cc-content"]}>
+                <Header/>
+                <main className={classes["cc-main"]}>
+                    {children}
+                </main>
+            </div>
+            <div className={classes["cc-wrapper-inner-section"]}>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon4} alt="cost icon"/>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon5} alt="cost icon"/>
+                <img className={classes["cc-wrapper-inner-icon"]} src={costIcon6} alt="cost icon"/>
+            </div>
+
         </div>
     )
 }

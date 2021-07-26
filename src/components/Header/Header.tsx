@@ -10,8 +10,8 @@ const Header:React.FC = (): React.ReactElement => {
 
     return (
         <header className={classes["cc-header"]}>
-            <p>Cost Control</p>
-            <nav>
+            <p className={classes["cc-header-logo"]}>Cost Control</p>
+            <nav className={classes["cc-header-nav"]}>
                 <Link to={'/'}>HOME</Link>
                 <Link to={'/history'}>HISTORY</Link>
             </nav>
