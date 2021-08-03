@@ -5,7 +5,7 @@ export const lightThemeColors: ThemeColors = {
                         background: -webkit-linear-gradient(to right, #A43931, #1D4350);
                         background: linear-gradient(to right, #A43931, #1D4350);`,
     background: '#ffffff',
-    fontColor: '#333333',
+    fontColor: '#1D4350',
     reverseFontColor: '#ffffff'
 }
 
@@ -15,6 +15,6 @@ export const darkThemeColors: ThemeColors = {
                         background: linear-gradient(to right, #A43931, #1D4350);`,
     background: '#1f1c1c',
     fontColor: '#ffffff',
-    reverseFontColor: '#333333'
+    reverseFontColor: '#1D4350'
 }
 

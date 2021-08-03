@@ -1,5 +1,5 @@
 import {createUseStyles} from "react-jss";
-import {getBackgroundStyle, getFontColorStyle, Theme} from "../../styles";
+import {getFontColorStyle, getReverseFontColorStyle, Theme} from "../../styles";
 
 
 export default createUseStyles((theme: Theme) => ({
@@ -14,23 +14,30 @@ export default createUseStyles((theme: Theme) => ({
             width: '60%'
         }
     },
-    'cc-home-btn': {
+    'cc-home-section': {
+        display: 'flex',
+        alignItems: 'center',
+        height: '60px'
+    },
+    'cc-home-plus-btn': {
         height: '40px',
         width: '40px',
-        background: 'none',
+        background: getFontColorStyle(theme),
+        color: getReverseFontColorStyle(theme),
         border: `1px solid ${getFontColorStyle(theme)}`,
         borderRadius: '4px',
-        margin: '20px 0px',
-        fontSize: '1.5 rem',
+        fontSize: '1.5rem',
         cursor: 'pointer'
     },
-    'cc-home-popup': {
-        position: 'absolute',
-        top: '20px',
-        left: '20px',
-        height: '100px',
-        width: '300px',
-        background: getBackgroundStyle(theme),
-        border: '1px solid'
+    'cc-home-create-btn': {
+
+    },
+    'cc-home-cancel-btn': {
+
+    },
+    'cc-home-name-input': {
+        '& form': {
+            display: 'flex'
+        }
     }
 }))

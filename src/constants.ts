@@ -7,5 +7,5 @@ export enum PATHES {
 }
 
 export default Object.freeze({
-
+    mainFirebaseUrl: process.env.REACT_APP_BASE_URL,
 })

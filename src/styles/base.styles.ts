@@ -1,4 +1,5 @@
 import { Theme } from "./theme.types";
+import {getFontColorStyle, getFontFamilyStyle} from "./selectors.styles";
 
 export default (theme: Theme) => ({
     '@global': {
@@ -15,7 +16,7 @@ export default (theme: Theme) => ({
             fontFamily: theme.typo.fontFamily,
             fontSize: theme.typo.fontSize,
             fontWeight: 400,
-            color: '#333',
+            color: getFontColorStyle(theme),
             '-ms-text-size-adjust': '100%',
             '-webkit-text-size-adjust': '100%',
             '-webkit-font-smoothing': 'antialiased'
@@ -29,6 +30,9 @@ export default (theme: Theme) => ({
         },
         a: {
             textDecoration: 'none',
+        },
+        'input, button': {
+          fontFamily: getFontFamilyStyle(theme)
         },
         body: {
             height: '100vh',

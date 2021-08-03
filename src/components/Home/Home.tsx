@@ -1,37 +1,69 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, SyntheticEvent, useState} from "react";
 import {useTheme} from "react-jss";
 import {Theme} from "../../styles";
 import useStyles from "./Home.styles";
-import {ExpenseList} from "../Expense List";
+import {ExpenseList} from "../../containers";
+import {Input} from "../../ui";
 
-const Home:React.FC = (): JSX.Element => {
+type HomePropsType = {
+    addExpenseItem: (title: string, value: number) => void
+}
+
+const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
     const theme = useTheme<Theme>();
     const classes = useStyles({theme});
-    const [isHiddenPopup, setIsHiddenPopup] = useState<boolean>(true)
 
-    const addExpenseItemHandler = () => {
+    const [inputValue, setInputValue] = useState<string>('')
+    const [isItemNameInput, setIsItemNameInput] = useState<boolean>(false)
 
+    const onInputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        let value = e.target.value;
+        setInputValue(value)
+    }
+
+    const onSubmitHandler = (e: SyntheticEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setIsItemNameInput(false)
+        addExpenseItem(inputValue, 0)
+        setInputValue('')
+    }
+
+    const onCancelBtnClick = () => {
+        setIsItemNameInput(false)
+        setInputValue('')
     }
 
     return (
         <div className={classes["cc-home"]}>
             <section>
-                <h3>Add new expense item</h3>
-                <button
-                    className={classes['cc-home-btn']}
-                    onClick={() => setIsHiddenPopup(false)}
-                >+
-                </button>
+                <h3>Create new expense item</h3>
 
-                { !isHiddenPopup &&
-                <div className={classes['cc-home-popup']}>
-                    <button onClick={() => setIsHiddenPopup(true)}>x</button>
+                <div className={classes["cc-home-section"]}>
+                    {!isItemNameInput ?
+                        <button
+                            className={classes['cc-home-plus-btn']}
+                            onClick={() => setIsItemNameInput(true)}
+                        >+
+                        </button> :
+
+                        <div className={classes['cc-home-name-input']}>
+                            <form onSubmit={onSubmitHandler}>
+                                <Input type='text' value={inputValue} onChange={onInputChangeHandler}/>
+
+                                <button type="submit" className={classes['cc-home-create-btn']}>Create</button>
+                                <button type="button"
+                                        className={classes['cc-home-cancel-btn']}
+                                        onClick={onCancelBtnClick}
+                                >CANCEL
+                                </button>
+                            </form>
+                        </div>
+                    }
                 </div>
-                }
 
                 <hr/>
 
-            <ExpenseList />
+                <ExpenseList/>
             </section>
             <section>
 
