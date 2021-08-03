@@ -1,42 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="added Home component (in progress)">
-      <change afterPath="$PROJECT_DIR$/src/components/Expense List/Expense-List.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExpenseItem/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Expense-List.container.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Home.container.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Api.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/actionTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/actionsConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/middlewares/fetch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/middlewares/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/DateType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/ExpenseItemType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/index.ts" afterDir="false" />
+    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="Added firebase connection (get list and post item), added redux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Expense List/Expense-List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Expense List/Expense-List.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/colors.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/selectors.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/selectors.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +102,7 @@
       <workItem from="1627623715732" duration="8148000" />
       <workItem from="1627895429033" duration="17150000" />
       <workItem from="1627931656845" duration="909000" />
-      <workItem from="1627978396308" duration="16614000" />
+      <workItem from="1627978396308" duration="17056000" />
     </task>
     <task id="LOCAL-00001" summary="proj init">
       <created>1627038796937</created>
@@ -172,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627319754567</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added firebase connection (get list and post item), added redux">
+      <created>1628003229720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628003229720</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +169,7 @@
     <MESSAGE value="added wrapper icons + starting routing" />
     <MESSAGE value="added header styles" />
     <MESSAGE value="added Home component (in progress)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Home component (in progress)" />
+    <MESSAGE value="Added firebase connection (get list and post item), added redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added firebase connection (get list and post item), added redux" />
   </component>
 </project>

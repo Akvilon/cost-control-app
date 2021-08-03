@@ -6,11 +6,12 @@ import useStyles from './Input.styles'
 export type InputProps = {
     type: string
     label?: string
+    placeholder?: string
     value: string | number
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-export const Input: FC<InputProps> = ({type, label, value, onChange}) => {
+export const Input: FC<InputProps> = ({type, label, placeholder, value, onChange}) => {
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
 
@@ -19,6 +20,7 @@ export const Input: FC<InputProps> = ({type, label, value, onChange}) => {
             {label && <h4>{label}</h4>}
             <input
                 type={type}
+                placeholder={placeholder}
                 value={value}
                 onChange={onChange}
             />
