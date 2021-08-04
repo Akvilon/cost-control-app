@@ -3,6 +3,8 @@
 export type ThemeColors = {
     wrapperBackground: string,
     background: string,
+    reverseBackground: string,
+    dangerBackground: string,
     fontColor: string,
     reverseFontColor: string
 }

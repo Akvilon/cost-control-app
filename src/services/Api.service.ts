@@ -8,7 +8,6 @@ export class ApiService {
 
     public static getExpenseList = async () => {
         try {
-            console.log(CONST.mainFirebaseUrl)
             const response = await axios.get(`${CONST.mainFirebaseUrl}/expenses.json`);
             return await response.data;
         } catch (e) {
@@ -36,6 +35,20 @@ export class ApiService {
             return newItem;
         }
         catch (e) {
+            throw e;
+        }
+    }
+
+
+    public static patchExpenseList = async (field: string, value: string | number, id: string | undefined) => {
+        console.log(field, value, id)
+        try {
+            const patchItem = {
+                [field]: value
+            }
+            const response = await axios.patch(`${CONST.mainFirebaseUrl}/expenses/${id}.json`, patchItem);
+            return await response.data;
+        } catch (e) {
             throw e;
         }
     }

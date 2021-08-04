@@ -7,11 +7,11 @@ export default createUseStyles((theme: Theme) => ({
         display: 'flex',
         width: '100%',
         '& section': {
-            width: '40%',
+            width: '45%',
             position: 'relative',
         },
         '& section:last-child': {
-            width: '60%'
+            width: '55%'
         }
     },
     'cc-home-section': {
@@ -30,10 +30,10 @@ export default createUseStyles((theme: Theme) => ({
         cursor: 'pointer'
     },
     'cc-home-create-btn': {
-
+        marginLeft: '16px'
     },
     'cc-home-cancel-btn': {
-
+        marginLeft: '10px'
     },
     'cc-home-name-input': {
         '& form': {

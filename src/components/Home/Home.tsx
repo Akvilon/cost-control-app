@@ -3,7 +3,7 @@ import {useTheme} from "react-jss";
 import {Theme} from "../../styles";
 import useStyles from "./Home.styles";
 import {ExpenseList} from "../../containers";
-import {Input} from "../../ui";
+import {Button, Input} from "../../ui";
 
 type HomePropsType = {
     addExpenseItem: (title: string, value: number) => void
@@ -23,9 +23,14 @@ const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
 
     const onSubmitHandler = (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setIsItemNameInput(false)
-        addExpenseItem(inputValue, 0)
-        setInputValue('')
+
+        if (!inputValue.trim()) {
+            return
+        } else {
+            setIsItemNameInput(false)
+            addExpenseItem(inputValue, 0)
+            setInputValue('')
+        }
     }
 
     const onCancelBtnClick = () => {
@@ -40,28 +45,40 @@ const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
 
                 <div className={classes["cc-home-section"]}>
                     {!isItemNameInput ?
-                        <button
-                            className={classes['cc-home-plus-btn']}
-                            onClick={() => setIsItemNameInput(true)}
-                        >+
-                        </button> :
+                        <Button
+                            type="button"
+                            variant="PRIMARY"
+                            onClick={() => setIsItemNameInput(true)}>
+                            <h3>+</h3>
+                        </Button> :
 
                         <div className={classes['cc-home-name-input']}>
                             <form onSubmit={onSubmitHandler}>
-                                <Input type='text' value={inputValue} onChange={onInputChangeHandler}/>
+                                <Input
+                                    type='text'
+                                    placeholder='Enter item name please'
+                                    value={inputValue}
+                                    onChange={onInputChangeHandler}
+                                />
 
-                                <button type="submit" className={classes['cc-home-create-btn']}>Create</button>
-                                <button type="button"
-                                        className={classes['cc-home-cancel-btn']}
-                                        onClick={onCancelBtnClick}
-                                >CANCEL
-                                </button>
+                                <Button
+                                    type="submit"
+                                    className={classes["cc-home-create-btn"]}
+                                    variant="PRIMARY">
+                                    <h3>Create</h3>
+                                </Button>
+
+                                <Button
+                                    type="button"
+                                    className={classes["cc-home-cancel-btn"]}
+                                    variant="DANGER"
+                                    onClick={onCancelBtnClick}>
+                                    <h3>Cancel</h3>
+                                </Button>
                             </form>
                         </div>
                     }
                 </div>
-
-                <hr/>
 
                 <ExpenseList/>
             </section>

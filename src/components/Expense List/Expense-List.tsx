@@ -8,9 +8,13 @@ import {ExpenseItem} from "../ExpenseItem";
 type ExpenseListType = {
     expenseList: Array<ExpenseItemType>
     getExpensesList: () => void
+    patchItem: (field: string, value: string | number, id: string | undefined) => void
 }
 
-const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList}): JSX.Element => {
+const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList, patchItem}): JSX.Element => {
+
+    console.log('expenseList ---',expenseList)
+
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
     useEffect(() => {
@@ -21,7 +25,12 @@ const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList}):
         <div className={classes["cc-expenseList"]}>
             {
                 expenseList && expenseList.map(item => {
-                    return <ExpenseItem key={item.id} item={item}/>
+                    return (
+                        <ExpenseItem
+                            key={item.id}
+                            item={item}
+                            onTitleChangeHandler={patchItem}
+                        />)
                 })
             }
         </div>
