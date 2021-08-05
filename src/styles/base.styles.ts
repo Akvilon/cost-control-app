@@ -34,6 +34,18 @@ export default (theme: Theme) => ({
         'input, button': {
           fontFamily: getFontFamilyStyle(theme)
         },
+        'input[type=number]::-webkit-outer-spin-button': {
+            WebkitAppearance: 'none',
+            margin: '0'
+        },
+        'input[type=number]::-webkit-inner-spin-button': {
+            WebkitAppearance: 'none',
+            margin: '0'
+        },
+        'input[type=number]': {
+            MozAppearance: 'textfield'
+        },
+
         body: {
             height: '100vh',
             // width: '100vw',

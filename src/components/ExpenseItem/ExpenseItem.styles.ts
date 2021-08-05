@@ -15,6 +15,9 @@ export default createUseStyles((theme: Theme) => ({
         background: getWrapperBackgroundStyle(theme),
         marginTop: '10px',
         borderRadius: '2px',
+        '&:first-child': {
+            marginTop: '0',
+        },
         '& form': {
             display: 'flex',
             alignItems: 'center'
@@ -28,7 +31,7 @@ export default createUseStyles((theme: Theme) => ({
         maxWidth: '60px',
         '& input': {
             textAlign: 'center',
-            padding: '0'
+            paddingLeft: '0 !important'
         }
     },
     'cc-expenseItem-edit-btn': {

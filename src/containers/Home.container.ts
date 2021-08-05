@@ -5,7 +5,6 @@ import {AnyAction} from "redux";
 import {connect} from "react-redux";
 import { Home } from "../components/Home";
 
-
 type DispatchPropsTypes = {
     addExpenseItem: (title: string, value: number) => void
 }

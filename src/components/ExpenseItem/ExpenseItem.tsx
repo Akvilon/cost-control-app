@@ -8,36 +8,43 @@ import editIcon from '../../assets/images/edit.svg';
 
 type ExpenseItem = {
     item: ExpenseItemType
-    onTitleChangeHandler: (field: string, value: string | number, id: string | undefined) => void
+    patchItem: (field: string, value: string | number, id: string | undefined) => void
 }
 
-export const ExpenseItem: FC<ExpenseItem> = ({item, onTitleChangeHandler}) => {
+export const ExpenseItem: FC<ExpenseItem> = ({item, patchItem}) => {
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
-    const [inputValue, setInputValue] = useState<string>('')
+    const [costInputValue, setCostInputValue] = useState<number>(0)
     const [titleValue, setTitleValue] = useState<string>(`${item.title}`)
     const [isEditTitle, setIsEditTitle] = useState<boolean>(false)
 
-    const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const onCostInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         let value = e.target.value;
-        setInputValue(value)
+        setCostInputValue(+value)
     }
     const onTitleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         let value = e.target.value;
         setTitleValue(value)
     }
     const onEditBtnClick = () => {
-        setIsEditTitle(true)
+        setIsEditTitle(!isEditTitle)
+        setTitleValue(item.title as string)
     }
     const onTitleFormSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault()
+        if (!titleValue.trim()) return
 
-        if(!titleValue.trim()) {
-            return
-        } else {
-            setIsEditTitle(false)
-            onTitleChangeHandler('title',titleValue.trim(), item.id)
-        }
+        setIsEditTitle(false)
+        patchItem('title', titleValue.trim(), item.id)
+
+    }
+
+    const onCostFormSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        if (!costInputValue) return
+
+        setCostInputValue(0)
+        patchItem('value', costInputValue, item.id)
     }
     return (
         <div className={classes["cc-expenseItem"]}>
@@ -47,6 +54,7 @@ export const ExpenseItem: FC<ExpenseItem> = ({item, onTitleChangeHandler}) => {
                         <Input
                             type="text"
                             value={titleValue}
+                            min={0}
                             onChange={onTitleInputChange}
                         />
                     </form> : <h4>{titleValue}</h4>
@@ -59,12 +67,12 @@ export const ExpenseItem: FC<ExpenseItem> = ({item, onTitleChangeHandler}) => {
                 <img src={editIcon} className={classes["cc-expenseItem-edit"]} alt="edit icon"></img>
             </Button>
 
-            <form>
+            <form onSubmit={onCostFormSubmit}>
                 <Input
                     type="text"
                     className={classes["cc-expenseItem-input"]}
-                    value={inputValue}
-                    onChange={onInputChange}/>
+                    value={costInputValue}
+                    onChange={onCostInputChange}/>
                 <Button
                     type="submit"
                     variant="SECONDARY"

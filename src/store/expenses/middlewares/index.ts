@@ -1,4 +1,3 @@
-import {fetchMiddlewares} from "./fetch";
+import {costCounterMiddleware} from "./costsCounter";
 
-
-export const expensesMiddlewares = [...fetchMiddlewares];
+export const expensesMiddlewares = [costCounterMiddleware];

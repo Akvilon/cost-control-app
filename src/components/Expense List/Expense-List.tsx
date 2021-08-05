@@ -29,7 +29,7 @@ const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList, p
                         <ExpenseItem
                             key={item.id}
                             item={item}
-                            onTitleChangeHandler={patchItem}
+                            patchItem={patchItem}
                         />)
                 })
             }

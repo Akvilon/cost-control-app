@@ -41,7 +41,7 @@ export class ApiService {
 
 
     public static patchExpenseList = async (field: string, value: string | number, id: string | undefined) => {
-        console.log(field, value, id)
+
         try {
             const patchItem = {
                 [field]: value

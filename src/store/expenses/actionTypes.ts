@@ -22,9 +22,15 @@ export type PatchExpenseItemTitleType = {
     payload: ExpenseItemPatchType
 }
 
+export type SetTotalCostsActionType = {
+    type: typeof ACTION_CONST.SET_TOTAL_COSTS,
+    payload: number
+}
+
 
 export type ExpenseActionsType =
     GetExpensesListActionType |
     SetExpensesListActionType |
     AddExpenseItemType |
-    PatchExpenseItemTitleType;
+    PatchExpenseItemTitleType |
+    SetTotalCostsActionType;

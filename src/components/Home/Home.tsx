@@ -2,14 +2,15 @@ import React, {ChangeEvent, SyntheticEvent, useState} from "react";
 import {useTheme} from "react-jss";
 import {Theme} from "../../styles";
 import useStyles from "./Home.styles";
-import {ExpenseList} from "../../containers";
+import {ExpenseList, TotalCosts} from "../../containers";
 import {Button, Input} from "../../ui";
+import moment from "moment";
 
 type HomePropsType = {
     addExpenseItem: (title: string, value: number) => void
 }
 
-const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
+ export const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
     const theme = useTheme<Theme>();
     const classes = useStyles({theme});
 
@@ -28,7 +29,7 @@ const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
             return
         } else {
             setIsItemNameInput(false)
-            addExpenseItem(inputValue, 0)
+            addExpenseItem(inputValue.trim(), 0)
             setInputValue('')
         }
     }
@@ -82,11 +83,17 @@ const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
 
                 <ExpenseList/>
             </section>
-            <section>
 
+            <section>
+                <div className={classes["cc-home-date"]}>
+                    <h3>{moment().format('DD.MM.YYYY')}</h3>
+                    <div className={classes["cc-home-date-stub"]}></div>
+                </div>
+
+                <div className={classes["cc-home-total"]}>
+                    <TotalCosts />
+                </div>
             </section>
         </div>
     )
 }
-
-export {Home};

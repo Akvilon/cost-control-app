@@ -7,6 +7,8 @@ export type InputProps = {
     type: string
     label?: string
     className?: string
+    min?: number
+    max?: number
     placeholder?: string
     value: string | number
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void
@@ -17,8 +19,11 @@ export const Input: FC<InputProps> = ({
                                           label,
                                           className,
                                           placeholder,
+                                          min,
+                                          max,
                                           value,
-                                          onChange}) => {
+                                          onChange
+                                      }) => {
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
 
@@ -29,6 +34,8 @@ export const Input: FC<InputProps> = ({
                 type={type}
                 placeholder={placeholder}
                 value={value}
+                min={min}
+                max={max}
                 onChange={onChange}
             />
         </div>

@@ -5,6 +5,7 @@ import {getFontColorStyle, getReverseFontColorStyle, Theme} from "../../styles";
 export default createUseStyles((theme: Theme) => ({
     'cc-home': {
         display: 'flex',
+        height: 'inherit',
         width: '100%',
         '& section': {
             width: '45%',
@@ -39,5 +40,24 @@ export default createUseStyles((theme: Theme) => ({
         '& form': {
             display: 'flex'
         }
+    },
+    'cc-home-date': {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        '& h2': {
+            borderBottom: `1px solid ${getFontColorStyle(theme)}`
+        }
+    },
+    'cc-home-date-stub': {
+        height: '60px',
+        width: '100%'
+    },
+    'cc-home-total': {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 }))
