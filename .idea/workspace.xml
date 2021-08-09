@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="added expense item edit func">
-      <change afterPath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Total Costs/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/TotalCosts.container.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/expenses/middlewares/costsCounter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/totalCostsCounter.ts" afterDir="false" />
+    <list default="true" id="8fc61747-18a3-4a53-9124-9a58a6e63a2e" name="Default Changelist" comment="added patch items functionality, total value">
+      <change afterPath="$PROJECT_DIR$/src/components/Total List/TotalList.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Total List/TotalList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Total List/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/usePrevious.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Expense List/Expense-List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Expense List/Expense-List.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExpenseItem/ExpenseItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Total Costs/TotalCosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Expense-List.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Expense-List.container.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Home.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home.container.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/expenses/actionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/actionTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/expenses/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/expenses/actionsConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/actionsConstants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/expenses/middlewares/fetch.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/expenses/middlewares/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/middlewares/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/expenses/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/expenses/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/expenses/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +131,8 @@
       <workItem from="1627931656845" duration="909000" />
       <workItem from="1627978396308" duration="21781000" />
       <workItem from="1628058990012" duration="23731000" />
-      <workItem from="1628151631098" duration="24026000" />
+      <workItem from="1628151631098" duration="25416000" />
+      <workItem from="1628500311231" duration="11466000" />
     </task>
     <task id="LOCAL-00001" summary="proj init">
       <created>1627038796937</created>
@@ -202,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628089358734</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added patch items functionality, total value">
+      <created>1628178675821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628178675821</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +230,7 @@
     <MESSAGE value="Added firebase connection (get list and post item), added redux" />
     <MESSAGE value="commit" />
     <MESSAGE value="added expense item edit func" />
-    <option name="LAST_COMMIT_MESSAGE" value="added expense item edit func" />
+    <MESSAGE value="added patch items functionality, total value" />
+    <option name="LAST_COMMIT_MESSAGE" value="added patch items functionality, total value" />
   </component>
 </project>

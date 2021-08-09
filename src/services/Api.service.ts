@@ -52,4 +52,14 @@ export class ApiService {
             throw e;
         }
     }
+
+    public static deleteExpenseItem = async (id: string | undefined) => {
+        try {
+            const response = await axios.delete(`${CONST.mainFirebaseUrl}/expenses/${id}.json`);
+            return await response.data
+        }
+        catch (e) {
+            throw e;
+        }
+    }
 }

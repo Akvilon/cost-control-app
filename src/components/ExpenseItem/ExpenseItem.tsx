@@ -9,9 +9,10 @@ import editIcon from '../../assets/images/edit.svg';
 type ExpenseItem = {
     item: ExpenseItemType
     patchItem: (field: string, value: string | number, id: string | undefined) => void
+    deleteItem: (id: string | undefined) => void
 }
 
-export const ExpenseItem: FC<ExpenseItem> = ({item, patchItem}) => {
+export const ExpenseItem: FC<ExpenseItem> = ({item, patchItem, deleteItem}) => {
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
     const [costInputValue, setCostInputValue] = useState<number>(0)
@@ -29,6 +30,9 @@ export const ExpenseItem: FC<ExpenseItem> = ({item, patchItem}) => {
     const onEditBtnClick = () => {
         setIsEditTitle(!isEditTitle)
         setTitleValue(item.title as string)
+    }
+    const deleteItemHandler = (id: string | undefined) => {
+        deleteItem(id)
     }
     const onTitleFormSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -80,6 +84,16 @@ export const ExpenseItem: FC<ExpenseItem> = ({item, patchItem}) => {
                     <h3>Amend</h3>
                 </Button>
             </form>
+
+            <div className={classes["cc-expenseItem-delete"]}>
+                <div className={classes["cc-expenseItem-delete-inner"]}>
+                    <Button
+                        type="button"
+                        variant="TEXT"
+                        onClick={() => deleteItemHandler(item.id)}
+                    >&#10006;</Button>
+                </div>
+            </div>
         </div>
     )
 }

@@ -21,6 +21,8 @@ export default createUseStyles((theme: Theme) => ({
         justifyContent: 'center',
         height: '200px',
         width: '200px',
+        minHeight: '200px',
+        minWidth: '200px',
         borderRadius: '100%',
         border: `5px solid ${getReverseFontColorStyle(theme)}`
     },
@@ -29,7 +31,7 @@ export default createUseStyles((theme: Theme) => ({
             transform: 'scale(1)'
         },
         '50%': {
-            transform: 'scale(1.5)'
+            transform: 'scale(1.3)'
         },
         '100%': {
             transform: 'scale(1)'

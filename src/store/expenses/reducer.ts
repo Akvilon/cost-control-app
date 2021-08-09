@@ -24,6 +24,8 @@ export default (state = INITIAL_STATE, action: ExpenseActionsType): ExpensesStat
                     } : item
                 })
             }
+        case ACTION_CONST.DELETE_EXPENSE_ITEM:
+            return {...state, expenseList: state.expenseList.filter(item => item.id !== action.payload)}
         case ACTION_CONST.SET_TOTAL_COSTS:
             return {...state, totalCosts: action.payload}
         default:

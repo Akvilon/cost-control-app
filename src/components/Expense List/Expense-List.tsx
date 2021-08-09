@@ -9,12 +9,10 @@ type ExpenseListType = {
     expenseList: Array<ExpenseItemType>
     getExpensesList: () => void
     patchItem: (field: string, value: string | number, id: string | undefined) => void
+    deleteItem: (id: string | undefined) => void
 }
 
-const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList, patchItem}): JSX.Element => {
-
-    console.log('expenseList ---',expenseList)
-
+const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList, patchItem, deleteItem}): JSX.Element => {
     const theme = useTheme<Theme>()
     const classes = useStyles({theme})
     useEffect(() => {
@@ -30,6 +28,7 @@ const ExpenseList: React.FC<ExpenseListType> = ({expenseList, getExpensesList, p
                             key={item.id}
                             item={item}
                             patchItem={patchItem}
+                            deleteItem={deleteItem}
                         />)
                 })
             }

@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from "react";
 import {useTheme} from "react-jss";
 import {Theme} from "../../styles";
-import useStyles from './TotalCosts.styles'
+import useStyles from './TotalCosts.styles';
 
 export type TotalCostsPropsType = {
     totalCosts: number
@@ -13,10 +13,12 @@ export const TotalCosts: FC<TotalCostsPropsType> = ({totalCosts}) => {
     const [costsStyle, setCostsStyle] = useState<string>('')
 
     useEffect(() => {
-        setCostsStyle('cc-totalCost-value-animation')
-        return () => {
+       setCostsStyle(`${classes["cc-totalCost-value-animation"]}`);
+
+        const cancelTotalStyles = setTimeout(() => {
             setCostsStyle('')
-        }
+        },2000);
+        return () => clearTimeout(cancelTotalStyles)
     }, [totalCosts])
 
     return (

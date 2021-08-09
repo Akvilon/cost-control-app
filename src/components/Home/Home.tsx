@@ -5,12 +5,15 @@ import useStyles from "./Home.styles";
 import {ExpenseList, TotalCosts} from "../../containers";
 import {Button, Input} from "../../ui";
 import moment from "moment";
+import {ExpenseItemType} from "../../types/ExpenseItemType";
+import {TotalList} from "../Total List";
 
 type HomePropsType = {
     addExpenseItem: (title: string, value: number) => void
+    expenseList: Array<ExpenseItemType>
 }
 
- export const Home: React.FC<HomePropsType> = ({addExpenseItem}): JSX.Element => {
+export const Home: React.FC<HomePropsType> = ({addExpenseItem, expenseList}): JSX.Element => {
     const theme = useTheme<Theme>();
     const classes = useStyles({theme});
 
@@ -57,6 +60,7 @@ type HomePropsType = {
                             <form onSubmit={onSubmitHandler}>
                                 <Input
                                     type='text'
+                                    autoFocus
                                     placeholder='Enter item name please'
                                     value={inputValue}
                                     onChange={onInputChangeHandler}
@@ -91,7 +95,8 @@ type HomePropsType = {
                 </div>
 
                 <div className={classes["cc-home-total"]}>
-                    <TotalCosts />
+                    <TotalCosts/>
+                    <TotalList expenseList={expenseList}/>
                 </div>
             </section>
         </div>

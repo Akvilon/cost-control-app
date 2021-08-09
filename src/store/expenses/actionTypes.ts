@@ -17,9 +17,14 @@ export type AddExpenseItemType = {
     payload: ExpenseItemType
 }
 
-export type PatchExpenseItemTitleType = {
+export type PatchExpenseItemType = {
     type: typeof ACTION_CONST.PATCH_EXPENSE_ITEM,
     payload: ExpenseItemPatchType
+}
+
+export type DeleteExpenseItemType = {
+    type: typeof ACTION_CONST.DELETE_EXPENSE_ITEM,
+    payload: string | undefined
 }
 
 export type SetTotalCostsActionType = {
@@ -32,5 +37,6 @@ export type ExpenseActionsType =
     GetExpensesListActionType |
     SetExpensesListActionType |
     AddExpenseItemType |
-    PatchExpenseItemTitleType |
+    PatchExpenseItemType |
+    DeleteExpenseItemType |
     SetTotalCostsActionType;

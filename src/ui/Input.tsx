@@ -9,6 +9,7 @@ export type InputProps = {
     className?: string
     min?: number
     max?: number
+    autoFocus?: boolean
     placeholder?: string
     value: string | number
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void
@@ -19,6 +20,7 @@ export const Input: FC<InputProps> = ({
                                           label,
                                           className,
                                           placeholder,
+                                          autoFocus,
                                           min,
                                           max,
                                           value,
@@ -32,6 +34,7 @@ export const Input: FC<InputProps> = ({
             {label && <h4>{label}</h4>}
             <input
                 type={type}
+                autoFocus
                 placeholder={placeholder}
                 value={value}
                 min={min}

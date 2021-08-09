@@ -21,6 +21,11 @@ export const patchExpenseItemAction = (field: string, value: string | number, id
     payload: {field, value, id}
 })
 
+export const deleteExpenseItemAction = (id: string | undefined): ExpenseActionsType => ({
+    type: ACTION_CONST.DELETE_EXPENSE_ITEM,
+    payload: id
+})
+
 export const setTotalCostAction = (total: number): ExpenseActionsType => ({
     type: ACTION_CONST.SET_TOTAL_COSTS,
     payload: total
@@ -59,9 +64,8 @@ export const patchExpenseItem = (field: string, value: string | number, id: stri
         const total = getState().expenses.totalCosts;
 
         const itemCurrentCostValue: number | null = expenseList.filter(item => item.id === id)[0].value
-        // if patch field is cost value we should add its value to current state value
-        //const patchValue: number | string = field !== 'title' ? itemCurrentCostValue! + +value : value
 
+        // if patch field is cost value we should add its value to current state value
         let patchValue;
         if(field !== 'title') {
             patchValue = itemCurrentCostValue! + +value;
@@ -77,5 +81,15 @@ export const patchExpenseItem = (field: string, value: string | number, id: stri
             dispatch(patchExpenseItemAction(key, patchedItem[key], id))
         }
 
+    }
+}
+
+export const deleteExpenseItem = (id: string | undefined): ThunkAction<Promise<void>, AppStateType, unknown, ExpenseActionsType> => {
+    return async (dispatch, getState) => {
+        const res = await ApiService.deleteExpenseItem(id)
+        dispatch(deleteExpenseItemAction(id))
+        const expenseList = getState().expenses.expenseList;
+        const total = totalCostsCounter(expenseList)
+        dispatch(setTotalCostAction(total))
     }
 }
